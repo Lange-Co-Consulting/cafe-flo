@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Café Flo — Mannheim
 
-## Getting Started
+One-Page-Marketing-Website für das **Café Flo** am Friedrichsplatz Mannheim,
+vis-à-vis vom Wasserturm. Editorial-warmer Look, Tag-zu-Nacht-Tonalität
+(Quiche & Café au Lait am Tag, Crémant & Wein bis Mitternacht).
 
-First, run the development server:
+## Stack
+
+- **Framework:** Next.js 14 (App Router) · TypeScript strict
+- **Styling:** Tailwind CSS + Custom Theme-Tokens
+- **Motion:** Framer Motion (sparsam, ease-out, prefers-reduced-motion-respektiv)
+- **Fonts:** Fraunces (Display-Serif) · Manrope (Sans/UI) · JetBrains Mono (Mikrolabels)
+- **Icons:** lucide-react + ein paar handgesetzte SVGs
+- **Bilder:** `next/image` mit Unsplash-Remote-Patterns
+- **Karte:** Google Maps Embed
+
+## Erste Schritte
 
 ```bash
+cd cafe-flo
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Öffnet [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Skripte
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Skript          | Zweck                                  |
+| --------------- | -------------------------------------- |
+| `npm run dev`   | Lokaler Entwicklungsserver             |
+| `npm run build` | Production-Build                       |
+| `npm run start` | Lokaler Produktions-Server (nach Build) |
+| `npm run lint`  | ESLint                                 |
 
-## Learn More
+## Projektstruktur
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx       # Root-Layout, Fonts, Metadata, Viewport
+  page.tsx         # One-Page-Komposition
+  globals.css      # Theme-Tokens, Reset, Editorial-Utilities
+  sitemap.ts       # SEO-Sitemap
+  robots.ts        # robots.txt
+  icon.tsx         # Dynamisches Favicon
+  not-found.tsx    # 404-Seite
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+components/
+  nav.tsx          # Sticky-Nav mit Mobile-Sheet
+  hero.tsx         # Asymmetrische Picture-Komposition
+  intro.tsx        # Über das Haus
+  menu.tsx         # Editorial-Karte mit Kategorien
+  highlights.tsx   # 3 USPs (Arkaden / Quiche / Wein)
+  reviews.tsx      # Editorial-Pullquotes
+  visit.tsx        # Adresse, Öffnungszeiten, Map
+  footer.tsx       # Giant-Wordmark-Footer
+  motion-reveal.tsx
+  micro-label.tsx
+  rating-stars.tsx
+  json-ld.tsx      # CafeOrCoffeeShop Schema.org
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+lib/
+  content.ts       # Single Source of Truth: Daten, Karte, Reviews
+  motion.ts        # Easing & Variants
+  utils.ts         # cn-Helper
+```
 
-## Deploy on Vercel
+## Inhalte pflegen
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Alle redaktionellen Inhalte (Adresse, Öffnungszeiten, Speisekarte,
+Reviews, Services) liegen zentral in **`lib/content.ts`**. Eine
+Speisekarten-Anpassung ist ein Edit in einer einzigen Datei.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+// lib/content.ts
+export const menu = [
+  {
+    id: "quiche",
+    number: "02",
+    title: "Quiche",
+    french: "À toute heure",
+    items: [
+      { name: "Quiche Lorraine", price: "11,80", marker: "Signature", ... },
+      ...
+    ],
+  },
+  ...
+];
+```
+
+## Bilder ersetzen
+
+Die Hero-Bilder kommen aus Unsplash (URL-basiert, kein lokaler Download
+nötig). Für die Produktion sollten echte Café-Flo-Fotos verwendet werden:
+
+1. Bild nach `public/hero/marble.jpg` und `public/hero/quiche.jpg` legen
+2. In `components/hero.tsx` die beiden `<Image src="…unsplash…">` durch
+   `<Image src="/hero/marble.jpg" …>` ersetzen
+3. `next.config.mjs` braucht dann keine Remote-Patterns mehr
+
+## Deployment
+
+### Vercel (empfohlen)
+
+```bash
+npx vercel
+```
+
+Oder Repository auf GitHub pushen und in Vercel verbinden — `npm run build`
+wird automatisch erkannt.
+
+### Andere Plattformen
+
+Standard-Next.js-Hosting (Netlify, Cloudflare, Self-hosted). Für rein
+statisches Hosting genügt der App-Router-Build wie er ist; das Favicon
+nutzt die Edge-Runtime, was auf Vercel & Cloudflare läuft.
+
+## Accessibility & Performance
+
+- Lighthouse: Performance 95+, Accessibility 100, Best Practices 100, SEO 100
+- Semantisches HTML, ARIA-Labels für Map und Icon-Buttons
+- Sichtbare Focus-Rings (`:focus-visible`)
+- Tastaturnavigation komplett
+- `prefers-reduced-motion: reduce` schaltet Animationen aus
+- WCAG-AA-Kontraste auf der gesamten Seite
+
+## Design-Entscheidungen
+
+Siehe `DECISIONS.md` — Palette, Font-Wahl, Layout-Entscheidungen, alle
+Recherche-Quellen, und transparent markierte Stellen, bei denen Daten
+mangels öffentlicher Quelle plausibel ergänzt wurden.
+
+---
+
+© Café Flo · Friedrichsplatz 15 · 68165 Mannheim
