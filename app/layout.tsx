@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Manrope, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { business, seo } from "@/lib/content";
 
-const fraunces = Fraunces({
+const display = Instrument_Serif({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz"],
+  weight: ["400"],
+  style: ["normal", "italic"],
 });
 
 const manrope = Manrope({
@@ -86,7 +87,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${fraunces.variable} ${manrope.variable} ${mono.variable}`}
+      className={`${display.variable} ${manrope.variable} ${mono.variable}`}
     >
       <body>{children}</body>
     </html>

@@ -13,7 +13,7 @@ export function Visit() {
       <div className="container mx-auto">
         <Reveal className="mb-12 md:mb-20 max-w-3xl">
           <MicroLabel>Besuchen</MicroLabel>
-          <h2 className="mt-5 font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.98] tracking-tightest text-ink">
+          <h2 className="mt-5 font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[1.02] tracking-[-0.015em] text-ink">
             Friedrichsplatz 15,
             <br />
             <span className="italic text-accent">68165 Mannheim.</span>

@@ -41,14 +41,11 @@ export function Hero() {
               initial={initial}
               animate={animate}
               transition={{ duration: 0.7, ease, delay: 0.12 }}
-              className="mt-6 font-display font-light text-[clamp(2.4rem,9vw,6.25rem)] leading-[0.96] tracking-tightest text-ink"
+              className="mt-6 font-display text-[clamp(2.5rem,9.2vw,6.5rem)] leading-[1] tracking-[-0.02em] text-ink"
             >
               Vom Croissant
               <br />
-              in den{" "}
-              <span className="italic font-normal text-accent">
-                Crémant.
-              </span>
+              in den <span className="italic text-accent">Crémant.</span>
             </motion.h1>
 
             <motion.p
