@@ -21,10 +21,10 @@ export function ImageBand({
 }: Props) {
   const aspectClass =
     aspect === "ultrawide"
-      ? "aspect-[21/8]"
+      ? "aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/8]"
       : aspect === "tall"
-        ? "aspect-[16/10] md:aspect-[16/8]"
-        : "aspect-[16/9] md:aspect-[16/7]";
+        ? "aspect-[3/4] sm:aspect-[4/3] md:aspect-[16/8]"
+        : "aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/7]";
 
   return (
     <figure className={cn("bg-surface", className)}>

@@ -58,7 +58,7 @@ export function Nav() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <a
             href={`tel:${business.phone.tel}`}
             className="hidden md:inline-flex items-center gap-2 text-label uppercase text-ink/80 hover:text-accent transition-colors"
@@ -66,10 +66,17 @@ export function Nav() {
             <Phone className="h-3.5 w-3.5" aria-hidden />
             {business.phone.display}
           </a>
+          <a
+            href={`tel:${business.phone.tel}`}
+            className="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-full border border-line text-ink hover:bg-card transition-colors"
+            aria-label={`Anrufen — ${business.phone.display}`}
+          >
+            <Phone className="h-4 w-4" aria-hidden />
+          </a>
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-full border border-line text-ink hover:bg-card transition-colors"
+            className="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-full border border-line text-ink hover:bg-card transition-colors"
             aria-label="Menü öffnen"
             aria-expanded={open}
           >
@@ -100,7 +107,7 @@ export function Nav() {
             </button>
           </div>
           <nav
-            className="container mx-auto mt-10 flex flex-col gap-6"
+            className="container mx-auto mt-10 flex flex-col gap-5"
             aria-label="Sektionen"
           >
             {navLinks.map((l, i) => (
@@ -108,7 +115,7 @@ export function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="font-display text-5xl tracking-tighter leading-[0.95] text-ink"
+                className="font-display text-[clamp(2.5rem,11vw,3.5rem)] tracking-tighter leading-[0.95] text-ink py-1"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
                 {l.label}

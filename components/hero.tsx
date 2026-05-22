@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="grain relative overflow-hidden bg-surface pt-28 md:pt-32 pb-16 md:pb-24"
+      className="grain relative overflow-hidden bg-surface pt-24 md:pt-32 pb-14 md:pb-24"
       aria-label="Café Flo — Wasserturm Mannheim"
     >
       <div className="container mx-auto">
@@ -41,7 +41,7 @@ export function Hero() {
               initial={initial}
               animate={animate}
               transition={{ duration: 0.7, ease, delay: 0.12 }}
-              className="mt-6 font-display font-light text-[clamp(2.85rem,7.8vw,6.25rem)] leading-[0.96] tracking-tightest text-ink"
+              className="mt-6 font-display font-light text-[clamp(2.4rem,9vw,6.25rem)] leading-[0.96] tracking-tightest text-ink"
             >
               Vom Croissant
               <br />
@@ -55,7 +55,7 @@ export function Hero() {
               initial={initial}
               animate={animate}
               transition={{ duration: 0.65, ease, delay: 0.24 }}
-              className="mt-7 max-w-prose text-lead-lg text-ink/85"
+              className="mt-6 md:mt-7 max-w-prose text-lead md:text-lead-lg text-ink/85"
             >
               Französisches Café unter den Arkaden am Friedrichsplatz.
               Croissant und Café au&nbsp;Lait am Morgen, Crémant und Wein,
@@ -66,7 +66,7 @@ export function Hero() {
               initial={initial}
               animate={animate}
               transition={{ duration: 0.55, ease, delay: 0.36 }}
-              className="mt-9 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-7"
+              className="mt-8 md:mt-9 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-7"
             >
               <a
                 href="#karte"
@@ -150,7 +150,7 @@ export function Hero() {
           initial={initial}
           animate={animate}
           transition={{ duration: 0.6, ease, delay: 0.55 }}
-          className="mt-20 md:mt-24 pt-6 border-t border-line grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-6"
+          className="mt-16 md:mt-24 pt-6 border-t border-line grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-5 md:gap-x-6"
         >
           {[
             { k: "Eröffnet täglich", v: "09:00 — 00:00" },
@@ -159,8 +159,8 @@ export function Hero() {
             { k: "Preis", v: business.priceNote },
           ].map((m) => (
             <div key={m.k}>
-              <MicroLabel className="block text-[0.65rem]">{m.k}</MicroLabel>
-              <p className="mt-1.5 font-display text-lg leading-tight text-ink">
+              <MicroLabel className="block text-[0.6rem] md:text-[0.65rem]">{m.k}</MicroLabel>
+              <p className="mt-1.5 font-display text-base md:text-lg leading-tight text-ink">
                 {m.v}
               </p>
             </div>

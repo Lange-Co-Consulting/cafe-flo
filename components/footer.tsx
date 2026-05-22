@@ -24,7 +24,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer
-      className="relative bg-ink text-card pt-24 pb-10 overflow-hidden"
+      className="relative bg-ink text-card pt-20 md:pt-24 pb-10 overflow-hidden"
       aria-label="Footer"
     >
       <div className="container mx-auto relative">
@@ -32,11 +32,11 @@ export function Footer() {
           <div className="col-span-12 md:col-span-7">
             <p
               aria-hidden
-              className="font-display leading-[0.85] tracking-tightest text-[clamp(5rem,16vw,12rem)] text-card"
+              className="font-display leading-[0.85] tracking-tightest text-[clamp(3.75rem,18vw,12rem)] text-card"
             >
               Café <span className="italic text-warm">Flo</span>
             </p>
-            <p className="mt-6 max-w-md text-card/75 text-[0.98rem]">
+            <p className="mt-5 md:mt-6 max-w-md text-card/75 text-[0.95rem] md:text-[0.98rem]">
               Französisches Café am Friedrichsplatz, vis-à-vis vom
               Mannheimer Wasserturm. Bis Mitternacht geöffnet.
             </p>
@@ -74,12 +74,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="rule mt-20 mb-6 bg-card/15" />
-        <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="rule mt-16 md:mt-20 mb-6 bg-card/15" />
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
           <p className="text-label uppercase text-card/50">
             © {year} {business.name} · Mannheim
           </p>
-          <ul className="flex items-center gap-6 text-label uppercase text-card/50">
+          <ul className="flex items-center gap-4 md:gap-6 text-label uppercase text-card/50 flex-wrap">
             <li>
               <a href="#impressum" className="hover:text-warm transition-colors">
                 Impressum

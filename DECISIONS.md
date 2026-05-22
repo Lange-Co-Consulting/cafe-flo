@@ -37,11 +37,11 @@ Eine warme, leicht gedämpfte Palette, die Wasserturm-Park-Setting
 
 | Token              | Hex                       | Verwendung                                |
 | ------------------ | ------------------------- | ----------------------------------------- |
-| `--color-surface`  | `#f1eadc`                 | Hintergrund Sandstein-Cream               |
-| `--color-card`     | `#faf5eb`                 | Karten, Highlight-Sektion                 |
-| `--color-muted`    | `#e5d9c3`                 | Bildhintergrund / Section-Wechsel         |
+| `--color-surface`  | `#fafaf6`                 | Hintergrund — warmes Off-White            |
+| `--color-card`     | `#ffffff`                 | Karten, Highlight-Sektion                 |
+| `--color-muted`    | `#efeee9`                 | Bildhintergrund / Section-Wechsel         |
 | `--color-ink`      | `#1c1814`                 | Haupttext (warmes Anthrazit, kein #000)   |
-| `--color-sub`      | `#5a4f43`                 | Sekundärtext, Mikrolabels                 |
+| `--color-sub`      | `#5e564c`                 | Sekundärtext, Mikrolabels                 |
 | `--color-accent`   | `#455a3f`                 | Park-Grün — die Hauptakzentfarbe           |
 | `--color-accent-soft` | `#6c8364`              | Hover-Ton, sanftere Akzentfälle           |
 | `--color-warm`     | `#b8703a`                 | Sekundärakzent: Sterne, Abend-Akzent      |

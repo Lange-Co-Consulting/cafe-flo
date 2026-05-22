@@ -3,25 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --color-surface: #f1eadc;
+  --color-surface: #fafaf6;
   --color-ink: #1c1814;
-  --color-sub: #5a4f43;
-  --color-muted: #e5d9c3;
-  --color-card: #faf5eb;
+  --color-sub: #5e564c;
+  --color-muted: #efeee9;
+  --color-card: #ffffff;
   --color-accent: #455a3f;
   --color-accent-soft: #6c8364;
   --color-warm: #b8703a;
-  --color-line: rgba(28, 24, 20, 0.14);
+  --color-line: rgba(28, 24, 20, 0.11);
   color-scheme: light only;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
   background: var(--color-surface);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 768px) {
+  html { scroll-padding-top: 6rem; }
 }
 
 body {
@@ -40,6 +47,11 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+  [style*="opacity:0"],
+  [style*="opacity: 0"] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
