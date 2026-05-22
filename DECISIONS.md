@@ -205,15 +205,37 @@ Verifiziert über mindestens 5–7 Quellen, kreuzgecheckt:
 
 ## 8. Bilder
 
-Hero-Bilder kommen für die Demo aus Unsplash (CC0). URLs:
+Alle Bilder liegen lokal unter `public/photos/` — keine Remote-Quellen
+mehr, alle Pfade in `public/` werden bei `next build` statisch ins
+`/out` ausgespielt und über Cloudflare Pages direkt ausgeliefert.
 
-- `photo-1521017432531-fbd92d768814` — Bistro-Tisch / Café-Atmosphäre
-- `photo-1591985666643-1ecc67616216` — Quiche & Salat
+### Echte Fotos & Lizenzen
 
-Für die echte Produktion sollten lokale Fotos von Café Flo verwendet
-werden — Vorgehensweise im README dokumentiert (`public/hero/*.jpg`,
-Remote-Patterns dann entfernbar). Alt-Texte sind editorial gesetzt
-und kommunizieren auch ohne Bild den Markenanker (Wasserturm/Quiche/Arkaden).
+| Datei                           | Verwendung                                      | Quelle / Lizenz                                           |
+| ------------------------------- | ----------------------------------------------- | --------------------------------------------------------- |
+| `flo-2012.jpg`                  | Hero, Sekundärbild (Café-Flo-Interieur, real)   | allesmonnem.wordpress.com (2012, Café-Flo-Artikel)        |
+| `wasserturm-jugendstil.jpeg`    | Hero, Hauptbild (Wasserturm + Jugendstil-Laterne) | Georg Buzin · Wikimedia Commons · CC BY-SA 4.0          |
+| `wasserturm-landscape.jpg`      | ImageBand zwischen Intro und Menu               | E. Peiffer · Wikimedia Commons · CC BY-SA 3.0            |
+| `friedrichsplatz-0005.jpg`      | ImageBand zwischen Highlights und Reviews       | Gerold Rosenberg · Wikimedia Commons · CC BY-SA 3.0      |
+| `wasserturm-portrait.jpg`       | Reserve (nicht aktiv eingesetzt)                | Guido Radig · Wikimedia Commons · CC BY 3.0              |
+| `wasserturm-2025.jpg`           | Reserve (nicht aktiv eingesetzt)                | Gerd Eichmann · Wikimedia Commons · CC BY 4.0            |
+
+**Attribution** in der UI: Jede `ImageBand`-Komponente trägt den
+Photographen + Lizenz sichtbar als Mikrolabel-Caption unter dem Bild.
+
+### Hinweise zu rechtlicher Nutzung
+
+- **Wikimedia-Fotos** (Wasserturm, Friedrichsplatz) — CC-lizenziert,
+  dauerhafte Nutzung mit Attribution erlaubt.
+- **flo-2012.jpg** (Café-Flo-Interieur, allesmonnem.wordpress.com 2012):
+  Wahrscheinlich rechtefrei vom Blog-Autor freigegeben, im konkreten
+  Einsatz vor Go-Live aber sicherheitshalber direkt beim Blog-Autor
+  oder beim Café die Nutzungsrechte einholen — oder durch ein eigenes
+  Café-Flo-Innenraumfoto ersetzen.
+- **Empfehlung für Produktion:** Eigene Fotografien vom Café (Innenraum,
+  Quiche, Terrasse, Glas Wein am Abend) — Drop-in in
+  `public/photos/`, dieselben Datei-Namen behalten und keine
+  Code-Änderung nötig.
 
 ---
 

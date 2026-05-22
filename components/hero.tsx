@@ -107,8 +107,8 @@ export function Hero() {
               className="relative aspect-[4/5] w-full overflow-hidden rounded-card bg-muted"
             >
               <Image
-                src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=85"
-                alt="Bistro-Tisch unter Arkaden, Espresso und Croissant im Sonnenlicht"
+                src="/photos/wasserturm-jugendstil.jpeg"
+                alt="Mannheimer Wasserturm mit Jugendstil-Leuchte im Vordergrund, Sommer"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -127,10 +127,10 @@ export function Hero() {
               className="absolute -bottom-10 -left-10 hidden lg:block w-[58%] max-w-[260px] aspect-[3/4] overflow-hidden rounded-card bg-muted shadow-[0_20px_50px_-22px_rgba(28,24,20,0.4)]"
             >
               <Image
-                src="https://images.unsplash.com/photo-1591985666643-1ecc67616216?auto=format&fit=crop&w=900&q=85"
-                alt="Hausgemachte Quiche mit grünem Salat auf einem Holztisch"
+                src="/photos/flo-2012.jpg"
+                alt="Café-Flo-Interieur: Hirschgeweihe, Globe-Lichter und ein gerahmtes Portrait"
                 fill
-                sizes="(max-width: 1024px) 0px, 240px"
+                sizes="(max-width: 1024px) 0px, 260px"
                 className="object-cover"
               />
             </motion.div>
