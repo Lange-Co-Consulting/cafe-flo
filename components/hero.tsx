@@ -104,8 +104,8 @@ export function Hero() {
               className="relative aspect-[4/5] w-full overflow-hidden rounded-card bg-muted"
             >
               <Image
-                src="/photos/wasserturm-jugendstil.jpeg"
-                alt="Mannheimer Wasserturm mit Jugendstil-Leuchte im Vordergrund, Sommer"
+                src="/photos/wasserturm-evening.jpg"
+                alt="Mannheimer Wasserturm bei Abendlicht — warm beleuchtete Sandsteinfassade gegen den dunklen Himmel"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"

@@ -18,20 +18,20 @@ export default function Page() {
         <Hero />
         <Intro />
         <ImageBand
-          src="/photos/wasserturm-landscape.jpg"
-          alt="Wasserspiele und Wasserturm auf dem Friedrichsplatz Mannheim"
-          caption="Vis-à-vis · Friedrichsplatz mit Wasserspielen"
-          credit="Foto: E. Peiffer · Wikimedia Commons, CC BY-SA 3.0"
+          src="/photos/wasserturm-durchblick.jpg"
+          alt="Durchblick auf die Spitze des Mannheimer Wasserturms durch eine kreisrunde Öffnung — Bronze-Figur und Kupferdach"
+          caption="Durchblick · Spitze des Wasserturms"
+          credit="Foto: Englandfan · Wikimedia Commons, CC BY-SA 4.0"
           aspect="wide"
         />
         <MenuSection />
         <Highlights />
         <ImageBand
-          src="/photos/friedrichsplatz-0005.jpg"
-          alt="Friedrichsplatz Mannheim mit Wasserturm, Wasserspielen und Tulpenbeeten im Frühling"
-          caption="Friedrichsplatz im Frühling · Jugendstilensemble"
-          credit="Foto: Gerold Rosenberg · Wikimedia Commons, CC BY-SA 3.0"
-          aspect="tall"
+          src="/photos/wasserturm-landscape.jpg"
+          alt="Wasserspiele und Wasserturm auf dem Friedrichsplatz Mannheim, Frühling"
+          caption="Vis-à-vis · Friedrichsplatz mit Wasserspielen"
+          credit="Foto: E. Peiffer · Wikimedia Commons, CC BY-SA 3.0"
+          aspect="wide"
         />
         <Reviews />
         <Visit />

@@ -211,14 +211,18 @@ mehr, alle Pfade in `public/` werden bei `next build` statisch ins
 
 ### Echte Fotos & Lizenzen
 
+Alle Wikimedia-Fotos in **1920 px Breite** (Original-Auflösungen 2–7 MP).
+
 | Datei                           | Verwendung                                      | Quelle / Lizenz                                           |
 | ------------------------------- | ----------------------------------------------- | --------------------------------------------------------- |
 | `flo-2012.jpg`                  | Hero, Sekundärbild (Café-Flo-Interieur, real)   | allesmonnem.wordpress.com (2012, Café-Flo-Artikel)        |
-| `wasserturm-jugendstil.jpeg`    | Hero, Hauptbild (Wasserturm + Jugendstil-Laterne) | Georg Buzin · Wikimedia Commons · CC BY-SA 4.0          |
-| `wasserturm-landscape.jpg`      | ImageBand zwischen Intro und Menu               | E. Peiffer · Wikimedia Commons · CC BY-SA 3.0            |
-| `friedrichsplatz-0005.jpg`      | ImageBand zwischen Highlights und Reviews       | Gerold Rosenberg · Wikimedia Commons · CC BY-SA 3.0      |
-| `wasserturm-portrait.jpg`       | Reserve (nicht aktiv eingesetzt)                | Guido Radig · Wikimedia Commons · CC BY 3.0              |
-| `wasserturm-2025.jpg`           | Reserve (nicht aktiv eingesetzt)                | Gerd Eichmann · Wikimedia Commons · CC BY 4.0            |
+| `wasserturm-evening.jpg`        | Hero, Hauptbild — Abendlicht, warm beleuchtet   | Hubert Berberich · Wikimedia Commons · CC BY-SA 3.0       |
+| `wasserturm-durchblick.jpg`     | ImageBand zwischen Intro und Menu               | Englandfan · Wikimedia Commons · CC BY-SA 4.0             |
+| `wasserturm-landscape.jpg`      | ImageBand zwischen Highlights und Reviews       | E. Peiffer · Wikimedia Commons · CC BY-SA 3.0             |
+| `wasserturm-jugendstil.jpg`     | Reserve — Jugendstil-Laterne + Wasserturm       | Georg Buzin · Wikimedia Commons · CC BY-SA 4.0            |
+| `friedrichsplatz-0005.jpg`      | Reserve — Postkarten-Symmetrie mit Frühling     | Gerold Rosenberg · Wikimedia Commons · CC BY-SA 3.0       |
+| `wasserturm-portrait.jpg`       | Reserve                                          | Guido Radig · Wikimedia Commons · CC BY 3.0               |
+| `wasserturm-2025.jpg`           | Reserve                                          | Gerd Eichmann · Wikimedia Commons · CC BY 4.0             |
 
 **Attribution** in der UI: Jede `ImageBand`-Komponente trägt den
 Photographen + Lizenz sichtbar als Mikrolabel-Caption unter dem Bild.
