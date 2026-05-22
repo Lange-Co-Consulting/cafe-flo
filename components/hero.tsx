@@ -135,13 +135,6 @@ export function Hero() {
               />
             </motion.div>
 
-            {/* Wasserturm wordmark watermark */}
-            <span
-              aria-hidden
-              className="hidden lg:block absolute -right-2 top-2 rotate-90 origin-top-right font-mono text-[0.65rem] uppercase tracking-[0.35em] text-ink/35"
-            >
-              vis-à-vis Wasserturm
-            </span>
           </div>
         </div>
 
